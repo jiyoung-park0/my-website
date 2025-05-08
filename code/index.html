@@ -11,7 +11,24 @@
 
 
   
-  GitHub
+  
+    
+      
+      
+      
+      
+      
+    
+    Share
+  
+
+  
+  
+    
+    GitHub
+  
+
+
 
 
 
@@ -76,7 +93,7 @@
 </noscript><meta property="og:url" content="https://jiyoungpark.org/code/">
   <meta property="og:site_name" content="Jiyoung Park">
   <meta property="og:title" content="Code">
-  <meta property="og:description" content=" GitHub 2020-House-Cand-Tweets GPT-labeled identity appeals in 2020 U.S. House campaign tweets and replies 🔗 View Repository Predicting-survey-responses-with-llms Fine-tuned Falcon-RW-1B using QLoRA to predict Indonesian public opinion survey responses 🔗 View Repository ">
+  <meta property="og:description" content=" Share GitHub 2020-House-Cand-Tweets GPT-labeled identity appeals in 2020 U.S. House campaign tweets and replies 🔗 View Repository Predicting-survey-responses-with-llms Fine-tuned Falcon-RW-1B using QLoRA to predict Indonesian public opinion survey responses 🔗 View Repository ">
   <meta property="og:locale" content="en-us">
   <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
@@ -171,32 +188,97 @@
 </header>
 <div class="post-content">
 <style>
-  .repo-block { margin-bottom: 1.8rem; }
-  .repo-title { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.3rem; }
-  .repo-desc { font-size: 0.95rem; color: #ccc; }
-  .repo-link { font-size: 0.9rem; color: #66b; display: block; margin-top: 0.2rem; }
+  .button-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
   .github-button {
     display: inline-flex;
     align-items: center;
-    background-color: #24292e;
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 6px 12px;
+    font-size: 16px;
+    font-weight: normal;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
     text-decoration: none;
-    font-weight: 500;
-    margin-bottom: 2rem;
+    cursor: pointer;
+    box-shadow: 0px 1.5px 0px rgba(0, 0, 0, 0.8);
   }
+
+  .github-button svg,
   .github-button img {
     width: 20px;
     height: 20px;
-    margin-right: 0.5rem;
+    margin-right: 8px;
+  }
+
+  .repo-block {
+    margin-bottom: 1.8rem;
+  }
+
+  .repo-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+  }
+
+  .repo-desc {
+    font-size: 0.95rem;
+    color: #ccc;
+  }
+
+  .repo-link {
+    font-size: 0.9rem;
+    color: #66b;
+    display: block;
+    margin-top: 0.2rem;
   }
 </style>
 
-<a class="github-button" href="https://github.com/jiyoung-park0" target="_blank">
-  <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" />
-  GitHub
-</a>
+<div class="button-row">
+  <!-- Share Button -->
+  <a class="github-button" onclick="sharePage()">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="18" cy="5" r="3"></circle>
+      <circle cx="6" cy="12" r="3"></circle>
+      <circle cx="18" cy="19" r="3"></circle>
+      <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+      <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+    </svg>
+    Share
+  </a>
+
+  <!-- GitHub Button -->
+  <a class="github-button" href="https://github.com/jiyoung-park0" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" />
+    GitHub
+  </a>
+</div>
+
+<script>
+  function sharePage() {
+    const shareData = {
+      title: document.title,
+      url: window.location.href
+    };
+    if (navigator.share) {
+      navigator.share(shareData)
+        .catch((err) => {
+          if (err.name !== "AbortError") {
+            console.error("Share failed:", err);
+          }
+        });
+    } else {
+      navigator.clipboard.writeText(shareData.url)
+        .then(() => alert("Link copied to clipboard!"))
+        .catch(() => alert("Copy failed"));
+    }
+  }
+</script>
 
 <div class="repo-block">
   <div class="repo-title">2020-House-Cand-Tweets</div>
