@@ -24,6 +24,7 @@
 
 
 
+
   Published
 
   
@@ -246,7 +247,13 @@
       url: window.location.href
     };
     if (navigator.share) {
-      navigator.share(shareData).catch((err) => alert("Sharing failed: " + err));
+      navigator.share(shareData)
+        .catch((err) => {
+          // 사용자 취소는 무시
+          if (err.name !== "AbortError") {
+            console.error("Share failed:", err);
+          }
+        });
     } else {
       navigator.clipboard.writeText(shareData.url)
         .then(() => alert("Link copied to clipboard!"))
@@ -254,6 +261,7 @@
     }
   }
 </script>
+
 
 
 <style>
