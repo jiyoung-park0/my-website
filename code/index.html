@@ -11,19 +11,20 @@
 
   
     
+      
+      
+      
+      
+      
     
-    
-    
-    
+    Share
   
-  Share
-
-
-
 
   
-  GitHub
-
+  
+    
+    GitHub
+  
 
 
 
@@ -189,24 +190,25 @@
   </h1>
 </header>
 <div class="post-content">
-<!-- ✅ Share 버튼 (기존 스타일 유지) -->
-<button id="share-button" onclick="sharePage()" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 5px 10px; font-size: 16px; font-weight: normal; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); border: 1px solid rgb(221, 221, 221); border-radius: 6px; cursor: pointer; box-shadow: rgb(0, 0, 0) 0px 1.5px 0px; margin-bottom: 10px;">
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="18" cy="5" r="3"></circle>
-    <circle cx="6" cy="12" r="3"></circle>
-    <circle cx="18" cy="19" r="3"></circle>
-    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
-    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
-  </svg>
-  <strong>Share</strong>
-</button>
+<!-- ✅ Share 버튼 -->
+<div style="display: flex; flex-direction: column; align-items: flex-start; gap: 12px; margin-bottom: 24px;">
+  <button id="share-button" onclick="sharePage()" style="display: inline-flex; align-items: center; gap: 8px; padding: 5px 10px; font-size: 16px; font-weight: normal; color: rgb(255, 255, 255); background-color: transparent; border: 1px solid #888; border-radius: 6px; cursor: pointer; box-shadow: 0 1.5px 0px rgba(255,255,255,0.2);">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="18" cy="5" r="3"></circle>
+      <circle cx="6" cy="12" r="3"></circle>
+      <circle cx="18" cy="19" r="3"></circle>
+      <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+      <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+    </svg>
+    <strong>Share</strong>
+  </button>
 
-<!-- ✅ GitHub 버튼: Share 버튼과 동일한 스타일, 색상만 GitHub용 -->
-<a href="https://github.com/jiyoung-park0" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 5px 10px; font-size: 16px; font-weight: normal; color: rgb(0, 0, 0); background-color: transparent; border: 1px solid rgb(221, 221, 221); border-radius: 6px; cursor: pointer; box-shadow: rgb(0, 0, 0) 0px 1.5px 0px; text-decoration: none; margin-bottom: 20px;">
-  <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="18" height="18" alt="GitHub" />
-  <strong>GitHub</strong>
-</a>
-
+  <!-- ✅ GitHub 버튼 (같은 크기, 투명 배경, 동일 정렬) -->
+  <a href="https://github.com/jiyoung-park0" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; padding: 5px 10px; font-size: 16px; font-weight: normal; color: rgb(255, 255, 255); background-color: transparent; border: none; border-radius: 6px; cursor: pointer; text-decoration: none;">
+    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="18" height="18" alt="GitHub" />
+    <strong>GitHub</strong>
+  </a>
+</div>
 
 <!-- ✅ 공유 기능 -->
 <script>
@@ -230,7 +232,7 @@
   }
 </script>
 
-<!-- ✅ 스타일: 프로젝트 목록 -->
+<!-- ✅ 프로젝트 리스트 스타일 -->
 <style>
   .repo-block {
     margin-bottom: 1.8rem;
