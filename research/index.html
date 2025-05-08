@@ -8,6 +8,20 @@
 <title>Research | Jiyoung Park</title>
 <meta name="keywords" content="">
 <meta name="description" content="
+  
+    
+    
+    
+    
+    
+  
+  Share
+
+
+
+
+
+
 
 
   Published
@@ -124,7 +138,7 @@
 </noscript><meta property="og:url" content="https://jiyoungpark.org/research/">
   <meta property="og:site_name" content="Jiyoung Park">
   <meta property="og:title" content="Research">
-  <meta property="og:description" content=" Published Kang, Sinjae, Park, Ji Young and Ka, Sangjoon. 2022. “Analyses of Waffling Behavior of Korean National Assembly Members: Focusing on Conflict Bills in the 20th National Assembly.” The Korean Political Science Review (KPSR), 56(1): 261–287. [View Publication] Kang, Sinjae and Park, Ji Young. 2022. “Does the characteristics of the Bill influence legislators’ waffling decisions?: Focusing on conflict Bills in the 20th National Assembly.” Journal of Parliamentary Research, 17(2): 05–27. [View Publication] Park, Sanghyun, Jung, Minkung and Park, Ji Young. 2022. “Analysis of Topic Changes Appearing in Unification Speech of Presidents – Approach Using Structural Topic Model and Word2Vec.” Korean Unification Studies, 26(2): 99–156. [View Publication] Under Review “Disappeared or Been Deleted? Media Coverage of Policy Content in Presidential Debates” (with Jeonghyun Kim and Sinjae Kang) “Intersectional Hostility: How Twitter Replies to Congressional Candidates Vary by Candidate Gender and Race” (with Sanghyun Park and Jeonghyun Kim) “Why Do Legislators Make Waffling Decisions? Focusing on the Conflict Bill of the 17th–20th Korean National Assembly” (with Sinjae Kang) Working Papers “What Do You Want Me To Talk About? Voter Demands for Identity-Based Appeals in Election Campaigns” (with Young Seok Kim and Jeong Hyun Kim) Pandemic Politics: COVID-19 Strategic Framing Battles on Twitter in the 2020 House Races The Appeal of Simplicity: How Information Overload Drives Authoritarian Preferences Through Uncertainty Can AI Predict the Future of Public Opinion?: An Empirical Test with Indonesian Respondents ">
+  <meta property="og:description" content=" Share Published Kang, Sinjae, Park, Ji Young and Ka, Sangjoon. 2022. “Analyses of Waffling Behavior of Korean National Assembly Members: Focusing on Conflict Bills in the 20th National Assembly.” The Korean Political Science Review (KPSR), 56(1): 261–287. [View Publication] Kang, Sinjae and Park, Ji Young. 2022. “Does the characteristics of the Bill influence legislators’ waffling decisions?: Focusing on conflict Bills in the 20th National Assembly.” Journal of Parliamentary Research, 17(2): 05–27. [View Publication] Park, Sanghyun, Jung, Minkung and Park, Ji Young. 2022. “Analysis of Topic Changes Appearing in Unification Speech of Presidents – Approach Using Structural Topic Model and Word2Vec.” Korean Unification Studies, 26(2): 99–156. [View Publication] Under Review “Disappeared or Been Deleted? Media Coverage of Policy Content in Presidential Debates” (with Jeonghyun Kim and Sinjae Kang) “Intersectional Hostility: How Twitter Replies to Congressional Candidates Vary by Candidate Gender and Race” (with Sanghyun Park and Jeonghyun Kim) “Why Do Legislators Make Waffling Decisions? Focusing on the Conflict Bill of the 17th–20th Korean National Assembly” (with Sinjae Kang) Working Papers “What Do You Want Me To Talk About? Voter Demands for Identity-Based Appeals in Election Campaigns” (with Young Seok Kim and Jeong Hyun Kim) Pandemic Politics: COVID-19 Strategic Framing Battles on Twitter in the 2020 House Races The Appeal of Simplicity: How Information Overload Drives Authoritarian Preferences Through Uncertainty Can AI Predict the Future of Public Opinion?: An Empirical Test with Indonesian Respondents ">
   <meta property="og:locale" content="en-us">
   <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
@@ -214,6 +228,34 @@
 <main class="main">
   <main id="main">
     
+<button id="share-button" onclick="sharePage()" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 5px 10px; font-size: 16px; font-weight: normal; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); border: 1px solid rgb(221, 221, 221); border-radius: 6px; cursor: pointer; box-shadow: rgb(0, 0, 0) 0px 1.5px 0px;">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="18" cy="5" r="3"></circle>
+    <circle cx="6" cy="12" r="3"></circle>
+    <circle cx="18" cy="19" r="3"></circle>
+    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+  </svg>
+  <strong>Share</strong>
+</button>
+
+<script>
+  function sharePage() {
+    const shareData = {
+      title: document.title,
+      url: window.location.href
+    };
+    if (navigator.share) {
+      navigator.share(shareData).catch((err) => alert("Sharing failed: " + err));
+    } else {
+      navigator.clipboard.writeText(shareData.url)
+        .then(() => alert("Link copied to clipboard!"))
+        .catch(() => alert("Copy failed"));
+    }
+  }
+</script>
+
+
 <style>
   .publist { margin-bottom: 2rem; }
   .pubitem { margin-bottom: 1.2rem; }
